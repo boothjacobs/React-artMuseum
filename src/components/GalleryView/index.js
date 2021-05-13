@@ -5,7 +5,7 @@ import './galleryview.css';
 
 const GalleryView = ({galleries}) => {
     let { galleryId } = useParams();
-    
+
 
     const currentGal = galleries.find(element => element.gallerynumber === galleryId);
     console.log(currentGal)
@@ -25,7 +25,7 @@ const GalleryView = ({galleries}) => {
                     })}
                 </div>
             </Route>
-            <Route exact path={`/galleries/${currentGal.id}/art/:artId`}>
+            <Route exact path={'/galleries/:galleryId/art/:artId'}>
                     <ArtDescription gallery={currentGal}/>
             </Route>
         </>
