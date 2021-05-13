@@ -6,6 +6,7 @@ const GalleryNavigation = ({galleries}) => {
     return (
         <nav>
             <NavLink to="/">Home</NavLink>
+            <h1>Galleries</h1>
             {galleries.map((gal) => {
                 return (
                     <div key={gal.id}>
@@ -13,7 +14,6 @@ const GalleryNavigation = ({galleries}) => {
                     </div>
                 )
             })}
-            <h1>Galleries</h1>
         </nav>
     )
 }

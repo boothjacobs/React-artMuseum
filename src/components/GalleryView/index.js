@@ -1,25 +1,35 @@
-import { useParams } from "react-router-dom";
+import { useParams, Route, Link } from "react-router-dom";
+import ArtDescription from "../ArtDescription";
 import ArtImageTile from '../ArtImageTile';
+import './galleryview.css';
 
 const GalleryView = ({galleries}) => {
     let { galleryId } = useParams();
     // console.log(galleryId)
 
     const currentGal = galleries.find(element => element.gallerynumber === galleryId);
-    // console.log(currentGal.objects)
+    console.log(currentGal)
 
     return (
         <>
-            <h1>Hello from GalleryView</h1>
-            <h2>{`${currentGal.name}`}</h2>
-            <div>
-                {currentGal.objects.map((obj) => {
-                    return (
-                        <ArtImageTile key={obj.id} gallery={currentGal} art={obj}/>
-                    )
-                })}
-            </div>
+            <Route exact path={`/galleries/${currentGal.id}`} >
+                <h2>{`${currentGal.name}: ${currentGal.theme}`}</h2>
+                <p>{`${currentGal.labeltext}`}</p>
+                <div id="art-container">
+                    {currentGal.objects.map((obj) => {
+                        return (
+                            <Link to={`/galleries/${currentGal.id}/art/${obj.id}`}>
+                                <ArtImageTile key={obj.id} gallery={currentGal} art={obj}/>
+                            </Link>
+                        )
+                    })}
+                </div>
+            </Route>
+            <Route exact path={`/galleries/${currentGal.id}/art/:artId`}>
+                    <ArtDescription gallery={currentGal}/>
+            </Route>
         </>
+
     );
 };
 
