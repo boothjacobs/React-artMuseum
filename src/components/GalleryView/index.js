@@ -5,7 +5,7 @@ import './galleryview.css';
 
 const GalleryView = ({galleries}) => {
     let { galleryId } = useParams();
-    // console.log(galleryId)
+    
 
     const currentGal = galleries.find(element => element.gallerynumber === galleryId);
     console.log(currentGal)
@@ -18,8 +18,8 @@ const GalleryView = ({galleries}) => {
                 <div id="art-container">
                     {currentGal.objects.map((obj) => {
                         return (
-                            <Link to={`/galleries/${currentGal.id}/art/${obj.id}`}>
-                                <ArtImageTile key={obj.id} gallery={currentGal} art={obj}/>
+                            <Link key={obj.id} to={`/galleries/${currentGal.id}/art/${obj.id}`}>
+                                <ArtImageTile  gallery={currentGal} art={obj}/>
                             </Link>
                         )
                     })}

@@ -1,3 +1,7 @@
 .active {
     font-weight: bold;
 }
+
+.gal-link {
+    padding: 3px;
+}
