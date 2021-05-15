@@ -7,18 +7,18 @@ const GalleryView = ({galleries}) => {
     let { galleryId } = useParams();
 
     const currentGal = galleries.find(element => element.gallerynumber === galleryId);
-    console.log(currentGal)
+    // console.log(currentGal)
 
     return (
         <>
             <Route exact path={`/galleries/${currentGal.id}`} >
                 <h2>{`${currentGal.name}: ${currentGal.theme}`}</h2>
                 <p>{`${currentGal.labeltext}`}</p>
-                <div id="art-container">
+                <div className="art-container">
                     {currentGal.objects.map((obj) => {
                         return (
                             <Link key={obj.id} to={`/galleries/${currentGal.id}/art/${obj.id}`}>
-                                <ArtImageTile  gallery={currentGal} art={obj}/>
+                                <ArtImageTile art={obj}/>
                             </Link>
                         )
                     })}

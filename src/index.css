@@ -1,1 +1,11 @@
 /* TODO Add site wide styles */
+#home-container {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.art-browse {
+    max-width: 200px;
+    margin: 15px;
+}

@@ -1,5 +1,5 @@
 
-const ArtImageTile = ({gallery, art}) => {
+const ArtImageTile = ({art}) => {
    
     return (
         <div>

@@ -4,6 +4,7 @@ import harvardArt from './data/harvardArt';
 import GalleryNavigation from './components/GalleryNavigation';
 import GalleryView from './components/GalleryView';
 import HomePage from './components/HomePage';
+import TypeView from './components/TypeView';
 
 function App() {
   // console.log(harvardArt);
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route path="/galleries/:galleryId">
           <GalleryView galleries={harvardArt.records} />
+        </Route>
+        <Route path="/types/:typeName">
+          <TypeView galleries={harvardArt.records} />
         </Route>
         <Route>
           <h2>Page Not Found</h2>
