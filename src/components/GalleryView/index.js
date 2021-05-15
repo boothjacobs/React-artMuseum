@@ -6,7 +6,6 @@ import './galleryview.css';
 const GalleryView = ({galleries}) => {
     let { galleryId } = useParams();
 
-
     const currentGal = galleries.find(element => element.gallerynumber === galleryId);
     console.log(currentGal)
 

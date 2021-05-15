@@ -1,7 +1,6 @@
 
 const ArtImageTile = ({gallery, art}) => {
-    // console.log("Art:", art.images)
-    // return null;
+   
     return (
         <div>
              {art.images.map((image) => {
