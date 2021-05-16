@@ -1,11 +1,30 @@
 /* TODO Add site wide styles */
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+#home-page {
+    display: grid;
+    justify-items: center;
+}
+
 #home-container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .art-browse {
     max-width: 200px;
+    max-height: 300px;
     margin: 15px;
+    display: grid;
+    justify-items: center;
+    color: gray;
 }

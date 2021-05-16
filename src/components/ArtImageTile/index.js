@@ -1,8 +1,8 @@
-import { useSort } from '../../context/SortContext';
+// import { useSort } from '../../context/SortContext';
 
 const ArtImageTile = ({art}) => {
-    const {galleries, architecture, coins, paintings, sculpture} = useSort();
-    
+    // const {galleries, architecture, coins, paintings, sculpture} = useSort();
+
     return (
         <div>
              {art.images.map((image) => {

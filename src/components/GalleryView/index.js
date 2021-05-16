@@ -6,7 +6,7 @@ import './galleryview.css';
 
 const GalleryView = () => {
     let { galleryId } = useParams();
-    const {galleries, architecture, coins, paintings, sculpture} = useSort();
+    const {galleries} = useSort();
     const currentGal = galleries.find(element => element.gallerynumber === galleryId);
     // console.log(currentGal)
 
@@ -31,6 +31,6 @@ const GalleryView = () => {
         </>
 
     );
-};
+}; 
 
 export default GalleryView;

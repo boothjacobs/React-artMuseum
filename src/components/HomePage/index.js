@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import TypeView from '../TypeView';
+
 import { useSort } from '../../context/SortContext';
 
-const HomePage = ({}) => {
-    const {galleries, architecture, coins, paintings, sculpture} = useSort();
+const HomePage = () => {
+    const {architecture, coins, paintings, sculpture} = useSort();
 
     return (
-        <div>
+        <div id="home-page">
             <h1>Browse Our Collections</h1>
                 <p>Browse by work type</p>
             <div id="home-container">

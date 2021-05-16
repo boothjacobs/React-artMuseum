@@ -3,7 +3,7 @@ import { useSort } from '../../context/SortContext';
 import './GalleryNavigation.css'
 
 const GalleryNavigation = () => {
-    const {galleries, architecture, coins, paintings, sculpture} = useSort();
+    const {galleries} = useSort();
     // console.log("galleries: ", galleries)
     return (
         <nav>
