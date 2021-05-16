@@ -1,11 +1,12 @@
 import { useParams, Route, Link } from "react-router-dom";
+import { useSort } from '../../context/SortContext';
 import ArtDescription from "../ArtDescription";
 import ArtImageTile from '../ArtImageTile';
 import './galleryview.css';
 
-const GalleryView = ({galleries}) => {
+const GalleryView = () => {
     let { galleryId } = useParams();
-
+    const {galleries, architecture, coins, paintings, sculpture} = useSort();
     const currentGal = galleries.find(element => element.gallerynumber === galleryId);
     // console.log(currentGal)
 

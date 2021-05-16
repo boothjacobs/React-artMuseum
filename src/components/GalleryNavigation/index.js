@@ -1,8 +1,10 @@
 import {NavLink} from 'react-router-dom';
+import { useSort } from '../../context/SortContext';
 import './GalleryNavigation.css'
 
-const GalleryNavigation = ({galleries}) => {
-    // console.log(galleries)
+const GalleryNavigation = () => {
+    const {galleries, architecture, coins, paintings, sculpture} = useSort();
+    // console.log("galleries: ", galleries)
     return (
         <nav>
             <div id="nav-top">

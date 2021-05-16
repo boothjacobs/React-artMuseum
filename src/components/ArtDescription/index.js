@@ -1,8 +1,10 @@
 import {Link, useParams} from 'react-router-dom';
+import { useSort } from '../../context/SortContext';
 
 const ArtDescription = ({gallery}) => {
     const {galleryId, artId} = useParams();
-
+    const {galleries, architecture, coins, paintings, sculpture} = useSort();
+    
     let thisArt = gallery.objects.find(obj => obj.id === +artId)
     // console.log(thisArt)
     return (

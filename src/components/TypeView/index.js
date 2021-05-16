@@ -1,9 +1,11 @@
 import {Link, useParams} from 'react-router-dom';
+import { useSort } from '../../context/SortContext';
 import ArtImageTile from '../ArtImageTile';
 
 //renders a gallery of works by type(classification)
-const TypeView = ({galleries, works}) => {
+const TypeView = ({works}) => {
     const {typeName} = useParams();
+    const {galleries, architecture, coins, paintings, sculpture} = useSort();
     console.log(works);
     return (
         <>

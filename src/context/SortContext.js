@@ -31,7 +31,8 @@ for (let i = 0; i < galleries.length; i++) {
 export const SortingProvider = (props) => {
 
     return (
-        <SortingContext.Provider value={{harvardArt}}>
+        <SortingContext.Provider value={{galleries: harvardArt.records,
+            architecture, boxes, coins, mirrors, paintings, sculpture, vessels}}>
             {props.children}
         </SortingContext.Provider>
     );

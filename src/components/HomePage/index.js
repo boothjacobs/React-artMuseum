@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import TypeView from '../TypeView';
 import { useSort } from '../../context/SortContext';
 
-const HomePage = ({galleries}) => {
-    const {architecture, coins, paintings, sculpture} = useSort();
+const HomePage = ({}) => {
+    const {galleries, architecture, coins, paintings, sculpture} = useSort();
 
     return (
         <div>
